@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Home Page</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg  text-bg-warning p-3  fw-bold">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">My Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#stories">Stories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1>Welcome to My Home</h1>
+            <p class="lead">Share your stories with the world!</p>
+            <a href="#story-form" class="btn btn-warning">Submit Your Story</a>
+        </div>
+    </section>
+
+    <!-- Story Submission Form -->
+    <section id="story-form" class="py-5 bg-light">
+
+        <div id="stories-section" style="display: none;">
+            <section id="stories" class="py-5">
+                <div class="container">
+                    <h2 class="text-center mb-4">User Stories</h2>
+                    <div class="row" id="stories-container">
+                        <!-- User submitted stories will be added here dynamically -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="container">
+            <h2 class="text-center mb-4">Submit Your Story</h2>
+            <form id="form" class="mx-auto shadow p-4" style="max-width: 600px;" onsubmit="return validateForm()">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Story Title</label>
+                    <input type="text" class="form-control" id="title" placeholder="Enter the title of your story..." required>
+                <p id="error-title" class="text-danger mt-2"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="story" class="form-label">Your Story</label>
+                    <textarea class="form-control" id="story" rows="4" placeholder="Write your story here..." required></textarea>
+                    <p id="error-message" class="text-danger mt-2"></p>
+                </div>
+                <button type="submit" class="btn btn-warning w-100">Submit</button>
+            </form>
+        </div>
+    
+    </section>
+    
+
+    </section>
+    
+    <!-- About Section -->
+<section id="about" class="py-5 text-black">
+    <div class="container text-center">
+        <h2>About Us</h2>
+        <p class="lead">We are a community of storytellers. Share your thoughts, experiences, and ideas with us!</p>
+        
+        <div class="row justify-content-center">
+            <!-- Story 1 - Yellow Square Card -->
+            <div class="col-md-4 d-flex justify-content-center mb-4">
+                <div class="card bg-warning text-dark square-card p-3">
+                    <h3 class="card-title">Our Beginning</h3>
+                    <p>We started as a small group of writers who wanted to inspire others through stories. Today, we have grown into a global community.</p>
+                </div>
+            </div>
+
+            <!-- Story 2 - Yellow Square Card -->
+            <div class="col-md-4 d-flex justify-content-center mb-4">
+                <div class="card bg-warning text-dark square-card p-3">
+                    <h3 class="card-title">The Journey</h3>
+                    <p>Along the way, we’ve learned that everyone has a story to tell, and every story has the power to touch lives and spark change.</p>
+                </div>
+            </div>
+
+            <!-- Story 3 - Yellow Square Card -->
+            <div class="col-md-4 d-flex justify-content-center mb-4">
+                <div class="card bg-warning text-dark square-card p-3">
+                    <h3 class="card-title">Our Future</h3>
+                    <p>With your contributions, we envision a future where stories can connect people across borders and generations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   <!-- Contact Section -->
+<section id="contact" class="py-5 d-flex justify-content-center align-items-center" style="min-height: 50vh;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <!-- Form Section -->
+            <div class="col-lg-6 col-md-8">
+                <h2 class="text-center mb-4">Contact Us</h2>
+                <form class="mx-auto shadow p-4 rounded bg-white">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-warning w-100">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+      
+
+    <!-- Footer -->
+    <footer class=" text-bg-warning p-3  fw-bold text-black py-3 text-center">
+        <div class="container">
+            <p>&copy; 2024 My Home. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

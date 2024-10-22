@@ -1,0 +1,122 @@
+/* General Styles */
+.hero {
+    background: url('back.gif') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1{
+    font-weight:1000;
+    font-size: 3rem;
+    text-shadow: rgb(172, 141, 4) 2px 5px;
+}
+h2{
+    font-size: 2.5rem;
+    font-weight:800;
+    text-shadow: rgb(238, 199, 27) 2px 5px;
+}
+.container a:hover{
+    font-weight:700;
+    background-color: rgb(240, 217, 8);
+}
+
+.yellow{
+    color: rgb(247, 117, 11);
+}
+.btn {
+    padding: 0.8rem 1.5rem;
+}
+
+/* Story Form */
+#story-form {
+    padding: 3rem;
+}
+
+#contact{
+    background: url('back.avif') no-repeat center center/cover;  
+
+}
+.error-message {
+    color: red;
+}
+
+.col-lg-6 img{
+    height:24rem;
+}
+.col-lg-6{
+    color: white;
+}
+.half-screen {
+    height: 50vh; /* Half of the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.square-card {
+    width: 300px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1.5rem 0;
+}
+
+#story-form {
+    background: linear-gradient(to bottom right, #f8f9fa, #e2e6ea);
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #ffc107; /* Bootstrap warning color */
+    box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
+}
+
+.btn-warning {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800; /* Darker shade on hover */
+    transform: scale(1.05);
+}
+.btn-danger{
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-danger:hover {
+    background-color: #ec4503; /* Darker shade on hover */
+    transform: scale(1.05);
+}
+#stories-section {
+    padding-top: 50px;
+}
+
+.story-card {
+    background: white;
+    border: 1px solid #ced4da;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+}
